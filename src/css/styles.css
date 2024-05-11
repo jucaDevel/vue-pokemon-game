@@ -1,0 +1,26 @@
+html, body {
+    background-color: #f1f1f1;
+    margin: 0px;
+}
+
+.game-info {
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 60%; /* Establece un ancho máximo para el contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no haya suficiente espacio */
+}
+
+.game-info-item {
+    font-size: 20px;
+    flex: 1; /* Permite que los elementos se expandan para ocupar el espacio disponible */
+    text-align: center; /* Centra el texto dentro de los elementos */
+    padding: 5px; /* Añade un pequeño relleno para separar los elementos */
+}
+
+@media screen and (max-width: 768px) {
+    .game-info {
+        flex-direction: column; /* Cambia la dirección de la flexbox a columna en pantallas más pequeñas */
+        align-items: center; /* Centra los elementos en el eje transversal */
+    }
+}
