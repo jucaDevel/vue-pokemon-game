@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     background-color: #f1f1f1;
     margin: 0px;
 }
@@ -7,20 +8,63 @@ html, body {
     margin: 40px auto;
     display: flex;
     justify-content: space-between;
-    max-width: 60%; /* Establece un ancho máximo para el contenedor */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no haya suficiente espacio */
+    max-width: 60%;
+    /* Establece un ancho máximo para el contenedor */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan cuando no haya suficiente espacio */
 }
 
 .game-info-item {
     font-size: 20px;
-    flex: 1; /* Permite que los elementos se expandan para ocupar el espacio disponible */
-    text-align: center; /* Centra el texto dentro de los elementos */
-    padding: 5px; /* Añade un pequeño relleno para separar los elementos */
+    flex: 1;
+    /* Permite que los elementos se expandan para ocupar el espacio disponible */
+    text-align: center;
+    /* Centra el texto dentro de los elementos */
+    padding: 5px;
+    /* Añade un pequeño relleno para separar los elementos */
 }
 
 @media screen and (max-width: 768px) {
     .game-info {
-        flex-direction: column; /* Cambia la dirección de la flexbox a columna en pantallas más pequeñas */
-        align-items: center; /* Centra los elementos en el eje transversal */
+        flex-direction: column;
+        /* Cambia la dirección de la flexbox a columna en pantallas más pequeñas */
+        align-items: center;
+        /* Centra los elementos en el eje transversal */
     }
+}
+
+.icon-life {
+    display: inline-block;
+    width: 20px;
+    /* Ancho del icono */
+    height: 10px;
+    /* Altura del icono */
+    color: red;
+    /* Color rojo */
+    margin: 0 4px;
+    /* Márgenes negros */
+    position: relative;
+    /* Posicionamiento relativo para elementos secundarios */
+}
+
+/* Estilo para la línea diagonal superior de la X */
+.icon-life::before,
+.icon-life::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    /* Grosor de la línea */
+    background-color: rgb(190, 7, 7);
+    /* Color negro */
+}
+
+/* Rotación de la línea diagonal superior */
+.icon-life::before {
+    transform: rotate(45deg);
+}
+
+/* Rotación de la línea diagonal inferior */
+.icon-life::after {
+    transform: rotate(-45deg);
 }

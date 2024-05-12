@@ -1,6 +1,6 @@
 import pokemonApi from "@/api/pokemonApi"; /**Objeto con la instancia a axios */
 
-const getPokemons = () => {
+export const getPokemons = () => {
 
     const pokemonsArr = Array.from( Array(650) )
     /** Array.from es una función que nos permite crear un array con x cantidad de posiciones predefinidas*/
@@ -18,7 +18,7 @@ const getPokemonOptions = async () =>{
     return pokemonsNames
 }
 
-const getPokemonsNames = async ( [a,b,c,d] = [] ) => {
+export const getPokemonsNames = async ( [a,b,c,d] = [] ) => {
     const promiseArr = [
         pokemonApi.get(`/${a}`),
         pokemonApi.get(`/${b}`),
